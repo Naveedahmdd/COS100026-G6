@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html jang="en">
+    <head>
+    <meta charset="UTF-8">
+        <title>Apply</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Group Project G6</title> <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="images/png"  href="images/computing-cloud.png" >
+    </head>
+    <body>
+  
+      <!-- Navigation bar  -->
+
+    <header>
+        <div class="logo-container">
+            <img class="logo" src="images/Logo cropped.png" alt="logo">
+        </div>
+
+      <!-- Navigation link  -->
+    <nav>
+        <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        </ul>
+    </nav>
+
+      <!-- Navigation button  -->
+    <div class="apply-container">
+        <a class="applynow" href="apply.html"><button>Apply now</button></a>
+    </div>
+    </header>
+
+    <div class="job-hero">
+        <h1>Job Application Form</h1>
+
+    </div>
+        <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+            
+            <!-- Job Reference Number -->
+            <p>
+                <label for="jobref">Job Reference Number</label>
+                <select name="jobref" id="jobref" required>
+                    <option value="">Please select</option>
+                    <option value="num1">COE25-66</option>
+                    <option value="num2">SEC25-11</option>
+                    <option value="num3">TCE25-33</option>
+                    <option value="num2">WD25-88</option>
+                    <option value="num2">UXD25-55</option>
+                </select>
+            </p>
+
+            <!-- First name -->
+            <p>
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="fname" pattern="[A-Za-z]{1,20}" required>
+            </p>
+
+            <!-- Last name -->
+            <p>
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname" pattern="[A-Za-z]{1,20}" required>
+            </p>
+
+            <!-- Date of birth -->
+            <p>
+                <label for="birthday">Date of Birth</label>
+                <input type="text" id="birthday" name="birthday" placeholder="dd/mm/yyyy" pattern="\d{2}/\d{2}/\d{4}" required>
+            </p>
+
+            <!-- Gender -->
+                <fieldset class="gender-group">
+                <legend>Gender</legend>
+                
+                <label for="male">
+                    <input type="radio" id="male" name="gender" value="Male" required> Male
+                </label>
+
+
+                <label for="female">
+                    <input type="radio" id="female" name="gender" value="Female"> Female
+                </label>
+
+
+                <label for="other">
+                    <input type="radio" id="other" name="gender" value="Other"> Other
+                </label>
+                </fieldset>
+
+
+            <!-- Street Address -->
+            <p>
+                <label for="address">Street Address</label>
+                <input type="text" id="address" name="address" maxlength="40" required>
+            </p>
+
+            <!-- Suburb/Town -->
+            <p>
+                <label for="suburb">Suburb/Town</label>
+                <input type="text" id="suburb" name="suburb" maxlength="40" required>
+            </p>
+
+            <!-- State -->
+            <p>
+                <label for="state">State</label>
+                <select name="state" id="state" required>
+                    <option value="">Please select</option>
+                    <option value="VIC">VIC</option>
+                    <option value="NSW">NSW</option>
+                    <option value="QLD">QLD</option>
+                    <option value="NT">NT</option>
+                    <option value="WA">WA</option>
+                    <option value="SA">SA</option>
+                    <option value="TAS">TAS</option>
+                    <option value="ACT">ACT</option>
+                </select>
+            </p>
+
+            <!-- Postcode -->
+            <p>
+                <label for="postcode">Postcode</label>
+                <input type="text" id="postcode" name="postcode" pattern="\d{4}" required>
+            </p>
+
+            <!-- Email Address -->
+            <p>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+            </p>
+
+            <!-- Phone Number -->
+            <p>
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone"
+                       pattern="^[0-9 ]{8,12}$" required>
+            </p>
+
+            <!-- Required technical list -->
+        <fieldset class="skills-group">
+         <legend>Technical Skills (Select all that apply)</legend>
+        
+            <label for="skill1"><input type="checkbox" id="skill1" name="skills" value="1"> Cloud Platforms (AWS, Azure) </label>
+            <label for="skill2"><input type="checkbox" id="skill2" name="skills" value="2"> Scripting & Automation (PowerShell, Bash, or Python) </label>
+            <label for="skill3"><input type="checkbox" id="skill3" name="skills" value="3"> Version Control Systems (Git, GitHub) </label>
+            <label for="skill4"><input type="checkbox" id="skill4" name="skills" value="4"> Infrastructure as Code (Terraform, Ansible) </label>
+            <label for="skill5"><input type="checkbox" id="skill5" name="skills" value="5"> Monitoring & Security Tools (Microsoft Defender, SIEM, Grafana) </label>
+            <label for="none"><input type="checkbox" id="none" name="skills" value="none"> None of the above</label>
+
+
+        <!-- Other skills text box stays full-width -->
+        <p class="full">
+            <label for="otherskills">Other Skills</label>
+            <textarea id="otherskills" name="otherskills" rows="2" cols="40"></textarea>
+        </p>
+        </fieldset>
+
+
+
+
+
+            <input type= "submit" value="Apply">
+            <input type= "reset" value="Reset Form">
+        </form>
+
+    <footer>
+
+
+    <div>
+    <p>&copy; 2025 Flowops | COS10026 Group G6 </p>
+    <p>
+      <a href="https://yourjiraprojectlink.atlassian.net/" target="_blank">
+        View Jira Project
+      </a>
+    </p>
+    </div>
+  </footer>
+    </body>
+</html>

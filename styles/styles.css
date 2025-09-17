@@ -1,0 +1,1156 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Unbounded:wght@200..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Manrope:wght@200..800&family=Unbounded:wght@200..900&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+body { 
+    background:#000;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+/* header */
+header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* three zones */
+  align-items: center;
+  padding: 20px 50px;
+}
+
+
+
+.logo-container {
+  justify-self: start;
+}
+
+
+nav {
+  justify-self: center;
+}
+
+
+.apply-container {
+  justify-self: end;
+}
+
+
+/* nav list */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 32px; /* spacing between links */
+}
+
+
+/* text */
+li, a, button {
+  font-family: "manrope", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+}
+
+
+.logo { cursor: pointer; }
+
+
+/* button */
+button {
+  padding: 8px 20px;
+  background: #0C44FF;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(9,79,255,.64);
+  transition: all 0.3s ease 0s;
+}
+
+
+button:hover { 
+    background: #5DC3FF;
+    transform: scale(1.1);
+}
+
+.nav-links li a:hover {
+    color: #1bceff;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
+
+/* span style */
+.change {
+    color: #1bceff;
+    font-weight: 600;
+    background-color: transparent;
+}
+
+.ital {
+    font-style: italic;
+    font-weight: 200;
+    text-transform: lowercase;
+}
+
+
+/* button style */
+button {
+    padding: 8px 20px;
+    background-color: #0C44FF;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 4px 15px rgba(9, 79, 255, 0.64);
+    transition: all 0.3s ease 0s;
+     transform: scale(1);
+}
+
+button:hover {
+    background-color: #5DC3FF;
+    transform: scale(1.1);  
+    
+}
+
+
+
+/* section style */
+
+
+/* Make all images responsive by default. Size the logo explicitly. */
+img { 
+    max-width: 100%; 
+    height: auto; }
+
+
+/* Your header logo */
+.logo { 
+    width: 160px;
+    height: auto; }
+
+
+
+
+.hero {
+    display: flex;
+    position: relative;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center;     /* Center horizontally */
+    text-align: center;      /* Center text */
+    height: 89vh;
+    background-image: url('images/Untitled (Website).jpg');
+    background-size: cover;
+    background-position: bottom-bottom;
+    background-repeat: no-repeat;
+    padding: 0 20px;
+}
+
+section .subheading{
+    font-family: "manrope", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 25px;
+    background-color: transparent;
+
+}
+.applynow  {
+  background-color: transparent;
+}
+
+.heading {
+    font-family: "figtree", sans-serif;
+    font-weight: 200;
+    font-size: 60px;
+    color: #ffffff;
+    margin-bottom: 15px; 
+    background-color: transparent;
+}
+
+.hero p {
+    color: rgb(197, 197, 197);
+    font-family: "manrope", sans-serif;
+    font-size: 18px;
+    max-width: 600px; 
+    margin-bottom: 25px;
+    background-color: transparent;
+}
+
+.hero-top, .hero-img {
+    display: flex;
+    align-items:center;  /* vertically centers text with the image */
+    gap: 10px;            /* space between img and sub text */
+    margin-bottom: 12px;  /* space below this row */
+    background-color: transparent;
+}
+
+.hero-img {
+    width: 30px; 
+    height: auto; /* make image smaller if needed */
+}
+
+
+
+
+.down {
+  position: absolute;
+  top:95%;   /* adjust this until it touches the line */
+  right:48%;  /* adjust this until it matches horizontally */
+  transform: translate(-50%, -50%); /* keeps it centered */
+  width: 30px;  /* adjust dot size */
+  height: 30px;
+  background-color: transparent;
+ animation: float 2.5s ease-in-out infinite;
+}
+
+
+
+
+
+
+@keyframes float {
+  0% {
+    transform: translate(-50%, -50%) translateY(0px);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-15px); 
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(0px); /
+  }
+}
+
+
+
+
+
+
+
+
+
+.logo-carousel {
+  position: relative;
+  background: #000;
+  padding: 32px 0;
+  overflow: hidden;
+}
+
+
+.logo-carousel .mask-left,
+.logo-carousel .mask-right {
+  position: absolute;
+  top: 0; 
+  bottom: 0;
+  width: 120px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+
+.logo-carousel .mask-left  { 
+  left: 0;  
+  background: linear-gradient(90deg, #000, transparent); 
+}
+.logo-carousel .mask-right { 
+  right: 0; 
+  background: linear-gradient(270deg, #000, transparent); 
+}
+
+
+.logo-carousel .track {
+  display: flex;
+  width: max-content;
+  animation: scroll 35s linear infinite;
+}
+
+
+.logo-carousel .slide {
+  display: flex;
+  align-items: center;
+  gap: 6rem;              /* space between items */
+  padding-right: 6rem;    /* smooth joining */
+  list-style: none;
+  margin: 0;
+}
+
+
+.logo-carousel li {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: rgb(197, 197, 197);
+  white-space: nowrap;
+  letter-spacing: 0.05em;
+  opacity: 0.9;
+}
+
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+
+
+
+
+
+
+
+#features {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 50px 20px;
+      flex-wrap: wrap;
+    
+    }
+
+#features h3{
+    font-family: "figtree", sans-serif;
+    font-weight: 600;
+    font-size: 50;
+}
+
+.card {
+      background-color: #111;
+      border: 1px solid #333333;
+      border-radius: 12px;
+      padding: 30px 20px;
+      text-align: center;
+      width: 300px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+.card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 191, 255, 0.2); /* bluish glow */
+    }
+
+.icon {
+     
+      color: #00bfff; /* cloud blue */
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 28px;
+    }
+
+div   h3 {
+      margin: 10px 0;
+      font-size: 1.3rem;
+      color: #ccc;
+      font-family: "figtree", sans-serif;
+      padding-bottom: 10px;
+    }
+
+
+div  p {
+      font-size: 0.95rem;
+      color: #ccc;
+      line-height: 1.6;
+      font-family: "manrope", sans-serif;
+    }
+
+
+
+
+
+
+
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* two equal columns */
+  gap: 60px;                      /* space between columns */
+  align-items: center;             /* vertically center text + image */
+  padding: 60px 10%;
+  color: #fff;
+}
+
+
+/* text side */
+.about-text h2 {
+  font-family: "figtree", sans-serif;
+  color:#fff;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+
+.about-text p {
+  font-family: "manrope", sans-serif;
+  color: #ccc;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+
+/* image side */
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+
+
+
+
+.mission-vision {
+  display: flex;
+  justify-content: start;
+  gap: 40px;
+  padding: 60px 10%;
+}
+
+
+.mission-vision .card {
+  flex: 1;
+  background: #111;
+  padding: 40px 20px 60px 20px;
+  border-radius: 12px;
+  text-align: start;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transition: transform .3s;
+}
+
+
+.mission-vision .card:hover {
+  transform: translateY(-8px);
+}
+
+
+
+.mission-vision h2 {
+  font-family: "figtree", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+
+.mission-vision p {
+  font-family: "manrope", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+
+
+
+
+
+.cta {
+  text-align: center;
+  padding: 50px 15%;
+  margin-top: 80px;
+  background: #000;
+  color: #fff;
+  border-radius: px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+
+.cta h2 {
+  font-family: "figtree", sans-serif;
+  font-size: 50px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+
+.cta p {
+  font-family: "manrope", sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+
+.cta .btn {
+  display: inline-block;
+  padding: 14px 32px;
+  background: #0C44FF;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+
+.cta .btn:hover {
+  background: #5DC3FF;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: medium;
+    padding: 20px 50px;
+    background: #191920;
+    color: #fff;
+    margin-top:0;  
+    display: flex;             
+    justify-content: center;    /* Center horizontally */
+    align-items: center;        /* Center vertically */
+    gap: 40px;
+
+}
+
+
+
+footer p {
+    background-color: transparent;
+    margin-bottom: 0px;
+    font-family: "manrope", sans-serif;
+    display: inline; 
+    margin-right: 10px;
+}
+
+footer a {
+    color: #5DC3FF;
+    text-decoration: none;
+    background-color: transparent;
+    display: inline; 
+}
+
+footer a:hover {
+    font-family: "manrope", sans-serif;
+    color: #fff;
+}
+
+
+
+
+
+
+
+/*==============jobs page styling===================*/
+
+
+
+.hero-jobs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 40vh;
+    padding: 50px 20px;
+    background-image: url('images/jobs.png');
+    background-size: cover;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    padding: 0 20px;
+}
+
+
+.hero-jobs h3,
+.hero-jobs p {
+  color: #fff;
+  font-family: "manrope", sans-serif;
+  font-weight: 200;
+  background-color: transparent;
+  margin: 0;
+}
+
+
+.sizeing{
+    font-size: 45px;
+    color:#fff;
+    font-family: "figtree", sans-serif;
+    font-weight: 300;
+    background-color: transparent;
+;
+}
+
+.content {
+  /* two columns: main + aside (aside will keep its own styles/content) */
+  display: grid;
+  grid-template-columns: 1fr;      /* mobile: single column */
+  gap: 24px;
+  width: min(1200px, 92vw);
+  margin: 24px auto 48px;
+}
+
+
+/* only at ≥992px, reveal the aside column */
+@media (min-width: 992px) {
+  .content {
+    grid-template-columns: minmax(0, 1fr) 320px; /* main | aside */
+    align-items: start;
+  }
+}
+
+
+
+
+header h1 {
+  font-weight: 300;
+  font-family: "figtree", sans-serif;
+  font-size: clamp(28px, 4.5vw, 42px);
+  margin-bottom: 6px;
+  background: transparent;
+
+}
+header h3 {
+  font-weight: 600;
+  color: #cfefff;
+  font-size: clamp(18px, 2.6vw, 22px);
+
+  background: transparent;
+
+}
+header p {
+  color: #c9c9cf;
+  font-size: 16px;
+  margin-bottom: 18px;
+  background: transparent;
+}
+
+
+
+
+
+main {
+  width: 100%;
+}
+
+
+/* section = one job “card” */
+.content > main > section {
+  background: #23232e;                 /* card surface */
+  border: 1px solid #272727;
+  border-radius: 14px;
+  padding: 18px 18px 14px;
+  margin-bottom: 16px;
+  font-family: "manrope", sans-serif;
+  transition: box-shadow .2s ease, transform .1s ease;
+}
+
+.content > main > section:hover {
+  box-shadow: 0 8px 26px rgba(0, 191, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+.content > main > h2{
+    font-family: "manrope", sans-serif;
+    font-size: 30px;
+    font-weight: 700px;
+}
+
+/* job title */
+.content > main > section > h3 {
+  font-family: "manrope", sans-serif;
+  font-size: clamp(18px, 2.8vw, 22px);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+  background: transparent;
+
+}
+
+
+/* small meta rows (Reference, Reports to, etc.) look like pills) */
+.content > main > section > p {
+  font-size: 14px;
+  color: #dfe6ee;
+  margin-bottom: 6px;
+  background: transparent;
+
+}
+
+.content > main > section > p strong,
+.content > main > section > p em {
+  color: #9cdcff;                  /* label accent */
+  font-style: normal;
+  background: transparent;
+
+}
+
+
+/* section headings inside each job (Overview/Responsibilities/Requirements) */
+.content > main > section > h4 {
+  margin-top: 14px;
+  margin-bottom: 6px;
+  font-size: 16px;
+  color: #cfefff;
+  font-weight: 700;
+  letter-spacing: .2px;
+  border-left: 3px solid #1bceff;
+  padding-left: 8px;
+  background: transparent;
+
+}
+
+
+/* lists inside cards */
+.content > main > section ul {
+  margin-left: 18px;
+  margin-bottom: 8px;
+  background: transparent;
+
+}
+.content > main > section ul li {
+  margin: 6px 0;
+  color: rgb(197, 197, 197);
+  background: transparent;
+
+}
+.content > main > section ul ul {
+  margin-top: 6px;
+  background: transparent;
+
+}
+
+
+/* give more breathing room to the first job card */
+.content > main > h2 {
+  font-size: 20px;
+  color: #e7f7ff;
+  margin: 10px 0 12px 2px;
+  font-weight: 700;
+  background: transparent;
+
+}
+
+
+aside { width: 100%; }
+@media (min-width: 992px) {
+  aside { position: sticky; top: 16px; }  /* stays visible while scrolling */
+}
+aside h2 { margin-bottom: 10px; }
+aside section { margin-bottom: 16px; }
+
+
+
+.content > main a { color: #5DC3FF; }
+.content > main a:hover { 
+    color: #fff; 
+    text-decoration: underline; 
+    text-underline-offset: 3px; 
+}
+
+.content > aside h3{
+    font-family: "figtree", sans-serif;
+    color: #5DC3FF;
+    font-weight: 400px;  
+}
+
+.content > aside ul {
+    font-family: "manrope", sans-serif;
+    color: rgb(197, 197, 197);
+    font-size: 10px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    background: transparent;
+}
+
+.content > aside ul li {
+    font-size: 14px;
+    margin: 6px 0;
+    background: transparent;
+
+}
+
+.content > aside ol li {
+    font-size: 14px;
+    margin: 6px 0;
+    background: transparent;
+
+}
+.content > aside a {
+    text-decoration: underline;
+    background: transparent;
+
+}
+.content > aside a:hover {
+    color: #5DC3FF;  
+
+    background: transparent;
+
+}
+
+
+
+
+
+
+
+
+/*===============apply page styling=======================*/
+
+.job-hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 20vh;
+    padding: 50px 20px;
+    background-image: url('images/jobs.png');
+    background-size: cover;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    padding: 0 20px;
+}
+
+.job-hero h1{
+    color:#fff;
+    font-family: "manrope", sans-serif;
+    font-weight: 600;
+    background-color: transparent;
+
+}
+/* ---------- “Table-style” Application Form ---------- */
+/* === Application Form Styling === */
+form {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff; /* same as your feature cards */
+  border: 1px solid #eee;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif; /* match hero + homepage */
+  color: #111; /* main text color */
+}
+
+
+/* Labels */
+form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+
+/* Inputs & Selects */
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form input[type="date"],
+form select,
+form textarea {
+  width: 80%;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  background: #fafafa; /* subtle like homepage background */
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #111; /* match Apply button */
+  box-shadow: 0 0 0 3px rgba(17, 17, 17, 0.1);
+  outline: none;
+}
+
+
+/* Fieldsets */
+form fieldset {
+  border: 1px dashed #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 16px;
+  background: #f9f9f9;
+}
+form legend {
+  font-weight: 700;
+  color: #111;
+  padding: 0 6px;
+}
+
+
+/* Inline checkboxes (Technical Skills) */
+form fieldset.skills-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  border: 1px dashed #ddd;
+  border-radius: 12px;
+  padding: 16px;
+  background: #f9f9f9;
+}
+form fieldset.skills-group legend {
+  flex-basis: 100%;
+  margin-bottom: 6px;
+  font-weight: 700;
+  color: #111;
+}
+form fieldset.skills-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  margin: 0;
+}
+
+
+/* Inline radio buttons (Gender) */
+form fieldset.gender-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px dashed #ddd;
+  border-radius: 12px;
+  padding: 12px 16px;
+  background: #f9f9f9;
+  flex-wrap: wrap; /* allows wrap on smaller screens */
+}
+
+
+form fieldset.gender-group legend {
+  margin-right: 10px;
+  font-weight: 700;
+  color: #111;
+}
+form fieldset.gender-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  font-weight: 500;
+}
+
+
+/* Inline checkboxes (Technical Skills) */
+form fieldset.skills-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  border: 1px dashed #ddd;
+  border-radius: 12px;
+  padding: 16px;
+  background: #f9f9f9;
+}
+
+form fieldset.skills-group legend {
+  flex-basis: 100%;
+  margin-bottom: 6px;
+  font-weight: 700;
+  color: #111;
+}
+
+form fieldset.skills-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  margin: 0;
+}
+
+
+
+
+
+
+
+/* Buttons */
+form input[type="submit"],
+form input[type="reset"] {
+  padding: 12px 20px;
+  border-radius: 999px;
+  border: 1px solid #111;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: 0.2s ease, color 0.2s ease;
+}
+
+
+form input[type="submit"] {
+  background: #0C44FF; /* same as Apply Now button */
+  color: #fff;
+}
+form input[type="submit"]:hover {
+  background: #8fe60d;
+}
+
+
+form input[type="reset"] {
+  background: #fff;
+  color: #111;
+}
+form input[type="reset"]:hover {
+  background: #f2f2f2;
+}
+
+
+/* Responsive (like homepage cards) */
+@media (max-width: 768px) {
+  form {
+    padding: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*=================About page styling========================*/
+
+
+.about-main {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  display: grid;
+  gap: 50px;
+}
+
+
+.about-main h2 {
+  font-family: "figtree", sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: #1bceff;
+  margin-bottom: 15px;
+}
+
+
+.about-main p,
+.about-main li,
+.about-main dd,
+.about-main figcaption {
+  font-family: "manrope", sans-serif;
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+
+/* Group info + photo side-by-side on desktop */
+.about-info,
+.about-photo {
+  background: transparent;
+}
+
+
+@media (min-width: 900px) {
+  .about-main {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+
+  .about-contributions,
+  .about-interests {
+    grid-column: 1 / -1; /* make them full width */
+  }
+}
+
+
+/* Contributions list */
+.about-contributions dt {
+  font-family: "figtree", sans-serif;
+  font-weight: 500;
+  color: #fff;
+  margin-top: 12px;
+}
+.about-contributions dd {
+  font-family: "manrope", sans-serif;
+  margin-left: 20px;
+  margin-bottom: 8px;
+  color: #5DC3FF;
+}
+
+.about-contributions dd:hover{
+    color: #fff;
+}
+
+/* Group photo */
+.about-photo figure {
+  text-align: center;
+}
+.about-photo img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+.about-photo figcaption {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #aaa;
+}
+.about-photo h2 {
+    text-align: center;
+}
+
+/* Interests table */
+.about-interests table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.about-interests caption {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #5DC3FF;
+  text-align: left;
+}
+.about-interests caption{
+  font-family: "manrope", sans-serif;
+  color: #fff;
+}
+.about-interests th,
+.about-interests td {
+  font-family: "manrope", sans-serif;
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.about-interests th {
+  background: #0C44FF;
+  color: #fff;
+  font-weight: 600;
+}
+.about-interests tr:nth-child(even) {
+  background: #111;
+}
+
+hr{
+    border: 1px solid #fff;
+    width: 40%;
+}
+
+
+
+
